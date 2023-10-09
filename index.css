@@ -109,11 +109,11 @@
   color: rgba(255, 255, 255, 0.44);
   font-size: 18px;
   font-weight: 700;
-  line-height: 32px;
   cursor: pointer;
 }
 
 .active-pagination-item > p{
   font-size: 36px;
   color: #fff;
+  line-height: 40px;
 }
