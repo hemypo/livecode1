@@ -1,9 +1,19 @@
-#section-1{
+html {
+  scroll-behavior: smooth;
+  }
+
+#section-1,
+#section-2,
+#section-3{
   height: 100vh;
   width: 100%;
 
   position: relative;
   display:flex;
+}
+
+#section-3{
+  height: 75vh;
 }
 
 #header{
@@ -37,14 +47,18 @@
 }
 
 .menu-link-bottom-line{
-  display: block;
   height: 2px;
   width: 18px;
   background: #4CAF50;
 }
 
-.active-link .menu-link-bottom-line{
+.menu-link:hover .menu-link-bottom-line{
   width: 110%;
+  transition: 0.5s;
+}
+
+.menu-link:not(:hover) .menu-link-bottom-line{
+  transition: 0.5s;
 }
 
 .welcome-bg{
@@ -116,4 +130,354 @@
   font-size: 36px;
   color: #fff;
   line-height: 40px;
+} 
+
+.we-are-wrapper{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.we-are-widget{
+  position: relative;
+  height: 560px;
+  width: 1100px;
+}
+
+#we-are-sqwd{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 590px;
+  height: 410px;
+
+  background-image: url(./assets/man-face-large.png);
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+  background-size: contain;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  z-index: 2;
+} 
+
+.we-are-header{
+  color: #333;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2.304px;
+  line-height: 60px;
+}
+
+.sqwd-header{
+color: #504E4E;
+font-size: 42px;
+font-style: normal;
+font-weight: 300;
+letter-spacing: 2.688px;
+
+margin-bottom: 32px;
+}
+
+.we-are-description{
+  display: flex;
+  gap: 10px;
+  margin-left: 21px;
+}
+
+.we-are-description > span{
+  width: 20px;
+  height: 2px;
+  background-color: #353535;
+  margin-top: 12px;
+}
+
+.we-are-description > p{
+  width: 280px;
+
+  color: #5B5858;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25px; /* 166.667% */
+  letter-spacing: 1.26px;
+}
+
+#green-box{
+  position: absolute;
+  top: 63px;
+  left: 403px;
+
+  width: 309px;
+  height: 418px;
+
+  opacity: 0.8;
+  background: #4CAF50;
+  
+  z-index: 1;
+}
+
+#we-are-full-frame{
+  z-index: 0;
+  position: absolute;
+
+  top: 168px;
+  left: 613px;
+
+  width: 560px;
+  height: 391px;
+
+  background-image: url(./assets/man-full-frame.png);
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#we-are-full-frame > .we-are-description{
+  margin-top: 175px;
+}
+
+.our-services-wrapper{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: #FBFBFB;
+}
+
+.our-services-title-block > span{
+  display: block;
+
+  height: 2px;
+  width: 45px;
+
+  margin-top: 7px;
+
+  background: #252525;
+}
+
+.our-services-title{
+  color: #252525;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 3.072px;
+}
+
+.our-services-list-block{
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+
+  margin-top: 85px;
+}
+
+.our-services-list-item{
+  width: 373px;
+  height: 260px;
+  background: white;
+  border-bottom: 3px solid transparent;
+}
+
+.services-list-item-content-wrapper{
+  margin: 50px 48px 35px 44px;
+}
+
+.services-card-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-card-title h2 {
+  color: #252525;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 1.28px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.services-card-title span {
+  display:block;
+  height: 2px;
+  width: 35px;
+  background: #252525;
+}
+
+.service-card-icon{
+  background: #FFF;
+  box-shadow: 0px 0px 20px #dbdbdb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  filter: lightgray 0px 0px / 100% 100% no-repeat;
+ }
+
+ .service-card-icon > img{
+
+  width: 24px;
+  height: 24px;
+  padding: 13px;
+  opacity: 0.5;
+ }
+
+.services-card-description > p {
+  color: #777;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 208.333% */
+  letter-spacing: 1.008px;
+  margin: 19px 0;
+}
+
+.services-card-more > a {
+  color: #252525;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  opacity: 0.5;
+}
+
+.our-services-list-item:hover {
+  border-bottom: 3px solid #70BF73;
+  transition: 1s;
+}
+
+.our-services-list-item:not(:hover) {
+  transition: 1s;
+}
+
+.our-services-list-item:hover .service-card-icon > img{
+  opacity: 1;
+  transition: 1s;
+}
+
+.our-services-list-item:not(:hover) .service-card-icon > img{
+  transition: 1s;
+}
+
+.our-services-list-item:hover .services-card-more > a{
+  opacity: 1;
+  transition: 1s;
+}
+
+.our-services-list-item:not(:hover) .services-card-more > a{
+  transition: 1s;
+}
+
+#section-4{
+  display: flex;
+}
+
+.latest-work-wrapper{
+  margin: 170px 0;
+
+  width: 100%;
+  height: 1600px;
+
+  display: flex;
+  justify-content: center;
+} 
+
+.latest-work-widget{
+  width: 1185px;
+  
+  position: relative;
+}
+
+.navigation-widget{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding-top: 45px;
+}
+
+.navigation-block{
+  display: flex;
+  gap: 40.5px;
+}
+
+.navigation-block > a{
+  color: #252525;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+letter-spacing: 0.832px;
+text-decoration: none;
+opacity: 0.3;
+}
+
+.navigation-block > a:hover, .navigation-block > a.active{
+  text-shadow: 0 0 .65px #252525, 0 0 .65px #252525;
+  opacity: 1;
+}
+
+.navigation-title-block{
+  margin-bottom: 51px;
+}
+
+.navigation-title{
+  color: #252525;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 3.072px;
+}
+
+
+.navigation-title-block span{
+  display: block;
+
+  height: 2px;
+  width: 45px;
+
+  margin-top: 7px;
+
+  background: #252525;
+}
+
+
+
+.even-card{
+  width: 584px;
+  height: 566px;
+
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.overflow-layout{
+  position: absolute;
+}
+
+.even-card-layout{
+  display: flex;
+  flex-direction: column;
+}
+
+.camera-card{
+  position: absolute;
+  right:0;
+  top:0;
+}
+
+.odd-card{
+
+
 }
