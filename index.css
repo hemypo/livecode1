@@ -455,7 +455,7 @@ opacity: 0.3;
 
 .even-card{
   width: 584px;
-  height: 566px;
+  height: 556px;
 
   display: flex;
   justify-content: flex-end;
@@ -464,11 +464,49 @@ opacity: 0.3;
 
 .overflow-layout{
   position: absolute;
+  left: 0;
+  top: 262px;
+}
+
+.even-card-layout > img{
+  width: 455px;
+  height: 444px;
+}
+
+.overflow-layout > p{
+  color: #252525;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 3.072px;
 }
 
 .even-card-layout{
   display: flex;
   flex-direction: column;
+}
+
+.even-card-info{
+  width: 70%;
+
+  text-align: end;
+}
+
+.even-card-info > h4{
+  margin-top: 24px;
+  margin-bottom: 17px;
+
+  color: #252525;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1.152px;
+}
+
+.even-card-info > p{
+  color: #C2C2C2;
+  font-size: 13px;
+  font-weight: 300;
 }
 
 .camera-card{
