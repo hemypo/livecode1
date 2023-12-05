@@ -387,7 +387,7 @@ margin-bottom: 32px;
   margin: 170px 0;
 
   width: 100%;
-  height: 1600px;
+  height: 1652px;
 
   display: flex;
   justify-content: center;
@@ -422,9 +422,14 @@ text-decoration: none;
 opacity: 0.3;
 }
 
-.navigation-block > a:hover, .navigation-block > a.active{
+.navigation-block > a:hover, .navigation-block > a.active, .view-more-latest-work:hover{
   text-shadow: 0 0 .65px #252525, 0 0 .65px #252525;
   opacity: 1;
+  transition:0.5s;
+}
+
+.navigation-block > a:not(:hover), .view-more-latest-work:not(:hover){
+  transition:0.3s;
 }
 
 .navigation-title-block{
@@ -451,7 +456,9 @@ opacity: 0.3;
   background: #252525;
 }
 
-
+.even-card, .odd-card{
+  cursor: pointer;
+}
 
 .even-card{
   width: 584px;
@@ -462,7 +469,7 @@ opacity: 0.3;
 
 }
 
-.overflow-layout{
+.even-card .overflow-layout{
   position: absolute;
   left: 0;
   top: 262px;
@@ -479,7 +486,8 @@ opacity: 0.3;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
-  letter-spacing: 3.072px;
+  letter-spacing: 2px;
+  display: inline;
 }
 
 .even-card-layout{
@@ -489,11 +497,11 @@ opacity: 0.3;
 
 .even-card-info{
   width: 70%;
-
+  
   text-align: end;
 }
 
-.even-card-info > h4{
+.card-info > h4{
   margin-top: 24px;
   margin-bottom: 17px;
 
@@ -503,10 +511,24 @@ opacity: 0.3;
   letter-spacing: 1.152px;
 }
 
-.even-card-info > p{
+.card-info > p{
   color: #C2C2C2;
   font-size: 13px;
   font-weight: 300;
+
+  margin-bottom:20px;
+}
+
+.card-info > span{
+  color: #252525;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.832px;
+  text-transform: uppercase;
+  display: inline;
+  opacity: 0;
 }
 
 .camera-card{
@@ -516,6 +538,99 @@ opacity: 0.3;
 }
 
 .odd-card{
+  width: 583px;
+  height: 596px;
+  
+  display: flex;
+  justify-content: flex-start;
+}
 
 
+.odd-card .overflow-layout{
+  position: absolute;
+  right: 0;
+  top: 268px;
+}
+
+.odd-card-layout{
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-card{
+  position: absolute;
+  left: 0;
+  top: 358px;
+}
+
+.odd-card-info{
+  width: 70%;
+  align-self: self-end;
+
+}
+
+.mac-card{
+  position: absolute;
+  top: 729px;
+  right: 0;
+}
+
+.macbook-card{
+  position: absolute;
+  left: 0;
+  top: 1094px;
+}
+
+.view-more-latest-work{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  color: #252525;
+  text-align: right;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2px;
+  
+  cursor: pointer;
+}
+
+
+.even-card:hover span, .odd-card:hover span{
+  opacity: 1;
+  transition: 0.5s;
+  }
+
+.even-card:not(:hover) span, .odd-card:not(:hover) span{
+  transition: 0.3s;
+  }
+
+.custom-strikethrow{
+  position: relative;
+}
+
+.custom-strikethrow::after{
+  position: absolute;
+  bottom: 42%;
+
+  display: block;
+  content: '';
+  height: 3px;
+  width:0%;
+  background-color: #70BF73;
+} 
+
+.even-card .custom-strikethrow::after{
+  right: 0;
+}
+
+.even-card:hover .custom-strikethrow::after, .odd-card:hover .custom-strikethrow::after{
+  width: 100%;
+  transition: 0.5s;
+}
+
+.even-card:not(:hover) .custom-strikethrow::after, .odd-card:not(:hover) .custom-strikethrow::after{
+  transition: 0.3s;
 }
