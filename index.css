@@ -4,7 +4,8 @@ html {
 
 #section-1,
 #section-2,
-#section-3{
+#section-3,
+#section-5{
   height: 100vh;
   width: 100%;
 
@@ -12,7 +13,14 @@ html {
   display:flex;
 }
 
-#section-3{
+#section-4,
+#section-6,
+#section-7,
+#section-8{
+  display: flex;
+}
+
+#section-3, #section-5{
   height: 75vh;
 }
 
@@ -54,11 +62,11 @@ html {
 
 .menu-link:hover .menu-link-bottom-line{
   width: 110%;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 .menu-link:not(:hover) .menu-link-bottom-line{
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 .welcome-bg{
@@ -323,7 +331,6 @@ margin-bottom: 32px;
  }
 
  .service-card-icon > img{
-
   width: 24px;
   height: 24px;
   padding: 13px;
@@ -354,33 +361,29 @@ margin-bottom: 32px;
 
 .our-services-list-item:hover {
   border-bottom: 3px solid #70BF73;
-  transition: 1s;
+  transition: 1s ease;
 }
 
 .our-services-list-item:not(:hover) {
-  transition: 0.4s;
+  transition: 0.4s ease;
 }
 
 .our-services-list-item:hover .service-card-icon > img{
   opacity: 1;
-  transition: 1s;
+  transition: 1s ease;
 }
 
 .our-services-list-item:not(:hover) .service-card-icon > img{
-  transition: 0.4s;
+  transition: 0.4s ease;
 }
 
 .our-services-list-item:hover .services-card-more > a{
   opacity: 1;
-  transition: 1s;
+  transition: 1s ease;
 }
 
 .our-services-list-item:not(:hover) .services-card-more > a{
-  transition: 0.4s;
-}
-
-#section-4{
-  display: flex;
+  transition: 0.4s ease;
 }
 
 .latest-work-wrapper{
@@ -425,11 +428,11 @@ opacity: 0.3;
 .navigation-block > a:hover, .navigation-block > a.active, .view-more-latest-work:hover{
   text-shadow: 0 0 .65px #252525, 0 0 .65px #252525;
   opacity: 1;
-  transition:0.5s;
+  transition:0.5s ease;
 }
 
 .navigation-block > a:not(:hover), .view-more-latest-work:not(:hover){
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .navigation-title-block{
@@ -600,11 +603,11 @@ opacity: 0.3;
 
 .even-card:hover span, .odd-card:hover span{
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.5s ease;
   }
 
 .even-card:not(:hover) span, .odd-card:not(:hover) span{
-  transition: 0.3s;
+  transition: 0.3s ease;
   }
 
 .custom-strikethrow{
@@ -628,9 +631,377 @@ opacity: 0.3;
 
 .even-card:hover .custom-strikethrow::after, .odd-card:hover .custom-strikethrow::after{
   width: 100%;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 .even-card:not(:hover) .custom-strikethrow::after, .odd-card:not(:hover) .custom-strikethrow::after{
-  transition: 0.3s;
+  transition: 0.3s ease;
+}
+
+.team-wrapper{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: #FBFBFB;
+}
+
+.team-title-block > span{
+  display: block;
+
+  height: 2px;
+  width: 45px;
+
+  margin-top: 7px;
+
+  background: #252525;
+}
+
+.team-title {
+  color: #252525;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 3.072px;
+}
+
+.team-list-block{
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 85px;
+}
+
+.team-card{
+  position: relative;
+}
+
+.team-card-img{
+  top: 0;
+  left: 0;
+  filter: grayscale(100%);
+}
+
+.team-card:hover .team-card-img{
+  transition: 0.5s ease;
+  filter: grayscale(0);
+}
+
+.team-card:not(hover) .team-card{
+  transition: 0.3s ease;
+}
+
+.team-card-title-wrapper{
+  position: absolute;
+  width: 100%;
+  bottom:0;
+  left:0;
+  height: 55px;
+  overflow: hidden;
+}
+
+.team-card:hover .team-card-title-wrapper{
+  transition: 0.5s ease;
+  height:155px;
+}
+
+.team-card:not(hover) .team-card-title-wrapper{
+  transition: 0.3s ease;
+}
+
+.team-card-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+.team-card:hover .team-card-bg{
+  opacity: 0.95;
+  transition: 0.5s ease;
+}
+
+.team-card:not(hover) .team-card-bg{
+  transition: 0.3s ease;
+}
+
+.team-card-info{
+  position: absolute;
+  top: 0;
+  left: 25%;
+  z-index: 1;
+  
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-card-info > h5{
+  color: #252525;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.152px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.team-card-info > h6{
+  color: #252525;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.152px;
+  margin-bottom: 8px;
+}
+
+.team-card-info > p {
+  color: #777;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 208.333% */
+  letter-spacing: 1.008px;
+}
+
+.team-card-info span{
+  width: 45px;
+  height: 2px;
+  display:block;
+  margin-bottom: 15px;
+  content: '';
+  background-color: #252525;
+}
+
+.review-wrapper{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.review-qoute{
+  width: 735px;
+  color: #373737;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 31px; /* 221.429% */
+  letter-spacing: 0.896px;
+
+  margin-top: 117px;
+  margin-bottom: 31px;
+}
+
+.review-qoute-symbol{
+  width: 20px;
+  height: 20px;
+
+  margin-bottom: 29px;
+}
+
+.review-name{
+  color: #373737;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.152px;
+
+  margin-bottom: 25px;
+}
+
+.review-name > .review-services{
+  color: #B8B8B8;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.896px;
+}
+
+.review-score{
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  justify-content: center;
+}
+
+.review-score-inactive{
+  opacity: 0.2;
+}
+
+.review-navigation{
+  display: block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.review-arrow-left{
+  position: absolute;
+  left: 0;
+  rotate: 180deg;
+}
+
+.review-arrow-right{
+  position: absolute;
+  right: 0;
+}
+
+.review-line{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 117px;
+}
+
+.review-line > span{
+  width: 511px;
+  height: 1px;
+  display: block;
+  content: '';
+  opacity: 0.5;
+  background-color: #D8D8D8;
+}
+
+.cta-wrapper{
+  width:100%;
+}
+
+.cta-widget{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-widget h5{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.667px;
+  margin-bottom: 22px;
+}
+
+.cta-widget p{
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.556px;
+}
+
+.cta-icon{
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.go-icon{
+  margin-top: 23px;
+  margin-bottom: 70px;
+}
+
+.brief-button{
+  background-color: #FBFBFB;
+  width: 100%;
+  color: #373737;
+}
+
+.contact-us-button{
+  background-color: #70BD59;
+  width: 100%;
+  color: #ffffff;
+}
+
+.contacts{
+  background: #2E2E2E;
+  color: white;
+  text-align: center;
+  
+  padding-top: 142px;
+  padding-bottom: 40px;
+}
+
+.footer-info{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  margin-bottom: 40px;
+}
+
+.footer-info > p{
+  color: #FFF;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.832px;
+  opacity: 0.5;
+}
+
+.footer-social-media{
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap:21px;
+}
+
+.footer-social-media-item{
+  padding:10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.footer-social-media-item img{
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  filter: invert(100%);
+}
+
+.footer-social-media-item:hover{
+  background: white;
+  transition: 0.5s ease;
+}
+
+.footer-social-media-item:hover img{
+  filter: invert(30%);
+  transition: 0.3s ease;
+}
+
+.footer-copyright{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  background-color: #252525;
+}
+
+.footer-copyright > p{
+  padding: 20px 0;
+
+  color: #FFF;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.832px;
+  opacity: 0.5;
 }
