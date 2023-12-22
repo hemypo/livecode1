@@ -58,6 +58,8 @@ html {
   height: 2px;
   width: 18px;
   background: #4CAF50;
+  
+  transition: 0.5s ease;
 }
 
 .menu-link:hover .menu-link-bottom-line {
@@ -65,14 +67,10 @@ html {
   transition: 0.5s ease;
 }
 
-.menu-link:not(:hover) .menu-link-bottom-line {
-  transition: 0.5s ease;
-}
-
 .welcome-bg {
   display: flex;
   flex: 1;
-  background-image:  url("./assets/welcome-image.png");
+  background-image:  url("../assets/welcome-image.png");
   background-repeat: no-repeat;
   background-size: 150%;
   background-position: 42% 86%;
@@ -161,7 +159,7 @@ html {
   width: 590px;
   height: 410px;
 
-  background-image: url(./assets/man-face-large.png);
+  background-image: url("../assets/man-face-large.png");
   background-repeat: no-repeat;
   background-position-x: 80%;
   background-size: contain;
@@ -236,11 +234,10 @@ margin-bottom: 32px;
 
   top: 168px;
   left: 613px;
-
   width: 560px;
   height: 391px;
 
-  background-image: url(./assets/man-full-frame.png);
+  background-image: url("../assets/man-full-frame.png");
   background-repeat: no-repeat;
 
   display: flex;
@@ -262,12 +259,9 @@ margin-bottom: 32px;
 
 .our-services-title-block > span {
   display: block;
-
   height: 2px;
   width: 45px;
-
   margin-top: 7px;
-
   background: #252525;
 }
 
@@ -292,6 +286,8 @@ margin-bottom: 32px;
   height: 260px;
   background: white;
   border-bottom: 3px solid transparent;
+
+  transition: 0.4s ease;
 }
 
 .services-list-item-content-wrapper {
@@ -335,6 +331,8 @@ margin-bottom: 32px;
   height: 24px;
   padding: 13px;
   opacity: 0.5;
+  
+  transition: 0.4s ease;
  }
 
 .services-card-description > p {
@@ -357,6 +355,7 @@ margin-bottom: 32px;
   text-decoration: none;
 
   opacity: 0.5;
+  transition: 0.4s ease;
 }
 
 .our-services-list-item:hover {
@@ -364,26 +363,10 @@ margin-bottom: 32px;
   transition: 1s ease;
 }
 
-.our-services-list-item:not(:hover) {
-  transition: 0.4s ease;
-}
-
-.our-services-list-item:hover .service-card-icon > img {
-  opacity: 1;
-  transition: 1s ease;
-}
-
-.our-services-list-item:not(:hover) .service-card-icon > img {
-  transition: 0.4s ease;
-}
-
+.our-services-list-item:hover .service-card-icon > img,
 .our-services-list-item:hover .services-card-more > a {
   opacity: 1;
   transition: 1s ease;
-}
-
-.our-services-list-item:not(:hover) .services-card-more > a {
-  transition: 0.4s ease;
 }
 
 .latest-work-wrapper {
@@ -415,24 +398,33 @@ margin-bottom: 32px;
   gap: 40.5px;
 }
 
-.navigation-block > a {
+.navigation-block > a, .view-more-latest-work {
   color: #252525;
-font-size: 13px;
-font-style: normal;
-font-weight: 400;
-letter-spacing: 1px;
-text-decoration: none;
-opacity: 0.3;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  opacity: 0.3;
+
+  transition:0.3s ease;
+}
+
+.view-more-latest-work {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  text-align: right;
+  letter-spacing: 2px;
+  
+  cursor: pointer;
 }
 
 .navigation-block > a:hover, .navigation-block > a.active, .view-more-latest-work:hover {
   text-shadow: 0 0 .65px #252525, 0 0 .65px #252525;
   opacity: 1;
   transition:0.5s ease;
-}
-
-.navigation-block > a:not(:hover), .view-more-latest-work:not(:hover) {
-  transition:0.3s ease;
 }
 
 .navigation-title-block {
@@ -446,7 +438,6 @@ opacity: 0.3;
   font-weight: 700;
   letter-spacing: 3px;
 }
-
 
 .navigation-title-block span {
   display: block;
@@ -531,6 +522,8 @@ opacity: 0.3;
   text-transform: uppercase;
   display: inline;
   opacity: 0;
+
+  transition: 0.3s ease;
 }
 
 .camera-card {
@@ -583,30 +576,9 @@ opacity: 0.3;
   top: 1094px;
 }
 
-.view-more-latest-work {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
-  color: #252525;
-  text-align: right;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 2px;
-  
-  cursor: pointer;
-}
-
-
 .even-card:hover span, .odd-card:hover span {
   opacity: 1;
   transition: 0.5s ease;
-  }
-
-.even-card:not(:hover) span, .odd-card:not(:hover) span {
-  transition: 0.3s ease;
   }
 
 .custom-strikethrow {
@@ -622,6 +594,7 @@ opacity: 0.3;
   height: 3px;
   width:0%;
   background-color: #70BF73;
+  transition: 0.3s ease;
 } 
 
 .even-card .custom-strikethrow::after {
@@ -631,10 +604,6 @@ opacity: 0.3;
 .even-card:hover .custom-strikethrow::after, .odd-card:hover .custom-strikethrow::after {
   width: 100%;
   transition: 0.5s ease;
-}
-
-.even-card:not(:hover) .custom-strikethrow::after, .odd-card:not(:hover) .custom-strikethrow::after {
-  transition: 0.3s ease;
 }
 
 .team-wrapper {
@@ -647,12 +616,9 @@ opacity: 0.3;
 
 .team-title-block > span {
   display: block;
-
   height: 2px;
   width: 45px;
-
   margin-top: 7px;
-
   background: #252525;
 }
 
@@ -679,15 +645,13 @@ opacity: 0.3;
   top: 0;
   left: 0;
   filter: grayscale(100%);
+  
+  transition: 0.5s ease;
 }
 
 .team-card:hover .team-card-img {
   transition: 0.5s ease;
   filter: grayscale(0);
-}
-
-.team-card:not(hover) .team-card {
-  transition: 0.3s ease;
 }
 
 .team-card-title-wrapper {
@@ -697,15 +661,13 @@ opacity: 0.3;
   left:0;
   height: 55px;
   overflow: hidden;
+  
+  transition: 0.3s ease;
 }
 
 .team-card:hover .team-card-title-wrapper {
   transition: 0.5s ease;
   height:155px;
-}
-
-.team-card:not(hover) .team-card-title-wrapper {
-  transition: 0.3s ease;
 }
 
 .team-card-bg {
@@ -716,15 +678,13 @@ opacity: 0.3;
   opacity: 0.5;
   width: 100%;
   height: 100%;
+  
+  transition: 0.3s ease;
 }
 
 .team-card:hover .team-card-bg {
   opacity: 0.95;
   transition: 0.5s ease;
-}
-
-.team-card:not(hover) .team-card-bg {
-  transition: 0.3s ease;
 }
 
 .team-card-info {
@@ -963,6 +923,8 @@ opacity: 0.3;
   padding:10px;
   border: 2px solid #fff;
   border-radius: 50%;
+  
+  transition: 0.5s ease;
 }
 
 .footer-social-media-item img {
@@ -970,6 +932,8 @@ opacity: 0.3;
   height: 20px;
   margin: 0 auto;
   filter: invert(100%);
+  
+  transition: 0.5s ease;
 }
 
 .footer-social-media-item:hover {
@@ -979,7 +943,7 @@ opacity: 0.3;
 
 .footer-social-media-item:hover img {
   filter: invert(30%);
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 
 .footer-copyright {
