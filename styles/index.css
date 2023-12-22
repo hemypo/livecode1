@@ -576,7 +576,7 @@ margin-bottom: 32px;
   top: 1094px;
 }
 
-.even-card:hover span, .odd-card:hover span {
+.even-card:hover .card-info > span, .odd-card:hover .card-info > span {
   opacity: 1;
   transition: 0.5s ease;
   }
